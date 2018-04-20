@@ -18,13 +18,20 @@ WIN_COMBINATIONS = [
 
 def turn(board)
   puts "Please enter 1-9:"
-  input = gets.strip
-  index = input_to_index(input)
-  if valid_move?(board, index)
-    move(board, index)
-    display_board(board)
-  else
-    turn(board)
+  i = gets.strip
+  index = input_to_index(i)
+  m = valid_move?(board, index)
+  if m == true
+    move(board, index, current_player(board))
+  else m == false
+    until m == true
+      puts "Sorry, that was an invalid move. Please enter 1-9:"
+      display_board(board)
+      i = gets.strip
+      index = input_to_index(i)
+      m = valid_move?(board, index)
+      move(board, index, current_player(board))
+    end
   end
 end
 
