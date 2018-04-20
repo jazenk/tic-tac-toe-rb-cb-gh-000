@@ -124,15 +124,10 @@ def current_player (board)
   end
 end
 
-def play(board)
-  input = gets
-  until over?(board) ==  true
-    if won?(board)
-      puts "Congratulations #{winner(board)}"
-    elsif draw?(board)
-      puts "Cat's Game!"
-    else
-      turn(board)
-    end
-  end
+ddef play(board)
+i = 0
+while i < 9
+  i += 1
+  turn(board)
+end
 end
