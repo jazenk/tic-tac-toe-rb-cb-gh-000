@@ -39,8 +39,10 @@ def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
 
-def move(board, index, current_player = "X")
-  board[index] = current_player
+def move(board, index, char)
+  board[index] = char
+  turn_count(board)
+  display_board(board)
 end
 
 def display_board(board)
