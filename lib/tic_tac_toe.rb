@@ -124,7 +124,7 @@ def current_player (board)
   end
 end
 
-ddef play(board)
+def play(board)
 i = 0
 while i < 9
   i += 1
