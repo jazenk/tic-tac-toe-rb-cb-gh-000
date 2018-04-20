@@ -32,7 +32,7 @@ def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
 
-def move(board, index, character)
+def move(board, index, current_player = "X")
   board[index] = current_player
 end
 
