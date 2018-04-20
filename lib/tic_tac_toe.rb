@@ -16,14 +16,6 @@ WIN_COMBINATIONS = [
 [2,4,6]
 ]
 
-def play (board)
-  num_turns = 0
-  until num_turns == 9
-    turn(board)
-    num_turns += 1
-  end
-end
-
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
